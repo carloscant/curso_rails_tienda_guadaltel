@@ -1,0 +1,12 @@
+<h1>Mi tienda</h1>
+
+<ul>
+	<% @productos.each do |producto| %>
+
+		<li>
+			<%= producto.nombre %>
+			<%= button_to 'Añadir al carro', carro_lineas_path(producto_id: producto.id) %>
+		</li>
+
+	<% end %>
+</ul>
